@@ -9,7 +9,7 @@ function ensureAuthenticated(request, response, next) {
     throw new AppError('JWT token não informado', 401);
   }
 
-  const [_, token] = authHeader.split('token=');
+  const [_, token] = authHeader.cookie.split('token=');
 
   try {
     const { role, sub: user_id } = verify(token, authConfig.jwt.secret);
