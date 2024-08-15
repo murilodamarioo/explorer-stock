@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Container, Item } from "./styles";
+import { Container } from "./styles";
 import { api } from "../../services/api";
 
 export function SalesReport() {
